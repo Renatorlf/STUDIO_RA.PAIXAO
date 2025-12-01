@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #fff;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.logo {
+    height: 60px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: .3s;
+}
+.menu a:hover {
+    color: #d46ba6;
+}
+
+#home {
+    height: 100vh;
+    background: url('banner.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+#home h1 {
+    font-size: 3rem;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+#sobre {
+    padding: 80px 50px;
+    text-align: center;
+}
+
+#sobre h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#sobre p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.carrossel-container {
+    width: 90%;
+    margin: 50px auto;
+    overflow: hidden;
+    border-radius: 15px;
+    position: relative;
+}
+
+.carrossel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carrossel img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.carrossel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#prev { left: 10px; }
+#next { right: 10px; }
+
+#contato {
+    padding: 80px 50px;
+    background: #f7f7f7;
+}
+
+#contato h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+button {
+    padding: 12px;
+    background: #d46ba6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: .3s;
+}
+button:hover {
+    background: #b5548c;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
