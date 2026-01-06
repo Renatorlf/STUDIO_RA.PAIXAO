@@ -1,9 +1,18 @@
+:root {
+    --rosa-principal: #D46BA6;
+    --rosa-escuro: #B5548C;
+    --rosa-claro: #F9E6F1;
+    --rosa-suave: #FFF5FA;
+    --texto-escuro: #3A2A33;
+}
+
+
 body {
     margin: 0;
-    padding: 0;
+    padding-top: 90px;
     font-family: 'Poppins', sans-serif;
-    background: #fff;
-    color: #333;
+    background: var(--rosa-suave);
+    color: var(--texto-escuro);
     overflow-x: hidden;
 }
 
@@ -15,13 +24,21 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
-    background: rgba(255, 255, 255, 0.85);
+    padding: 15px 30px;
+    background: rgba(252, 161, 207, 0.9);
     backdrop-filter: blur(10px);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    box-sizing: border-box;
+    box-shadow: 0 4px 15px rgba(212, 107, 166, 0.25);
     z-index: 1000;
 }
+
+.menu a {
+    color: var(--texto-escuro);
+}
+
+.menu a:hover {
+    color: var(--rosa-principal);
+}
+
 
 .logo {
     height: 60px;
@@ -30,7 +47,9 @@ body {
 .menu ul {
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 25px;
+    margin: 10px;
+    padding: 0px;
 }
 
 .menu a {
@@ -45,29 +64,32 @@ body {
 
 #home {
     height: 100vh;
-    background: url('banner.jpg') center/cover no-repeat;
+    background: linear-gradient(
+        rgba(243, 224, 235, 0.65),
+        rgba(250, 1, 142, 0.65)
+    ),
+    url('banner.jpg') center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: white;
-    padding: 20px;
 }
 
 #home h1 {
     font-size: 3rem;
-    text-shadow: 0 4px 10px rgba(0,0,0,0.5);
-    animation: fadeIn 1.2s ease-in-out;
+    text-shadow: 0 6px 15px rgba(0,0,0,0.4);
 }
+
 
 #sobre {
     padding: 80px 50px;
+    background: var(--rosa-claro);
     text-align: center;
 }
 
 #sobre h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    color: var(--rosa-escuro);
 }
 
 #sobre p {
@@ -88,6 +110,8 @@ body {
 .carrossel {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    background: white;
+    box-shadow: 0 10px 30px rgba(212, 107, 166, 0.2);
 }
 
 .carrossel img {
@@ -99,12 +123,16 @@ body {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0,0,0,0.5);
+    background: var(--rosa-principal);
     border: none;
     color: white;
     padding: 10px;
     cursor: pointer;
     font-size: 18px;
+}
+
+.carrossel-btn:hover {
+    background: var(--rosa-escuro);
 }
 
 #prev { left: 10px; }
@@ -152,4 +180,18 @@ button:hover {
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .menu ul {
+        gap: 15px;
+    }
+
+    #home h1 {
+        font-size: 2rem;
+    }
+
+    .logo {
+        height: 45px;
+    }
 }
