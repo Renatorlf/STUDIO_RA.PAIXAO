@@ -1,72 +1,75 @@
+
 :root {
-    --rosa-principal: #D46BA6;
-    --rosa-escuro: #B5548C;
-    --rosa-claro: #F9E6F1;
-    --rosa-suave: #FFF5FA;
-    --texto-escuro: #3A2A33;
-}
+    --rosa-principal: #d9468f;
+    --rosa-hover: #c2387d;
+    --rosa-claro: #fde7f1;
+    --rosa-suave: #f9c5dc;
 
+    --texto-escuro: #2f2f2f;
+    --texto-medio: #5a5a5a;
+    --branco: #ffffff;
 
+    --cinza-fundo: #f7f7f7;
+    --sombra-suave: rgba(0, 0, 0, 0.08);
+    
 body {
     margin: 0;
-    padding-top: 90px;
+    padding: 0;
     font-family: 'Poppins', sans-serif;
-    background: var(--rosa-suave);
     color: var(--texto-escuro);
     overflow-x: hidden;
 }
 
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
+.navbar{
+    position: flexible;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
-    background: rgba(252, 161, 207, 0.9);
+    background: rgba(243, 238, 240, 0.986);
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 15px rgba(212, 107, 166, 0.25);
     z-index: 1000;
 }
 
-.menu a {
+.logo{
+    height: 40px;
+    border: 1px solid red;
+}
+
+.menu a{
     color: var(--texto-escuro);
 }
 
 .menu a:hover {
-    color: var(--rosa-principal);
+    color: palevioletred;
 }
 
-
-.logo {
-    height: 60px;
-}
-
-.menu ul {
+.menu ul{
     list-style: none;
     display: flex;
-    gap: 25px;
-    margin: 10px;
-    padding: 0px;
+    margin-right: 100px;
+    padding: auto;
+    gap: 30px;
 }
 
-.menu a {
+.menu a{
     text-decoration: none;
-    color: #333;
+    color: #71277a;
     font-weight: 600;
+    font-size: 18px;
     transition: .3s;
 }
 .menu a:hover {
-    color: #d46ba6;
+    color: #923168;
 }
 
 #home {
-    height: 100vh;
+    height: 50vh;
     background: linear-gradient(
-        rgba(243, 224, 235, 0.65),
-        rgba(250, 1, 142, 0.65)
+        rgb(247, 207, 230),
+        rgba(247, 202, 227, 0.65)
     ),
     url('banner.jpg') center/cover no-repeat;
     display: flex;
@@ -78,13 +81,13 @@ body {
 
 #home h1 {
     font-size: 3rem;
-    text-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    text-shadow: 0 6px 15px rgba(221, 193, 193, 0.4);
 }
 
 
 #sobre {
     padding: 80px 50px;
-    background: var(--rosa-claro);
+    background: papayawhip;
     text-align: center;
 }
 
@@ -111,12 +114,13 @@ body {
     display: flex;
     transition: transform 0.5s ease-in-out;
     background: white;
-    box-shadow: 0 10px 30px rgba(212, 107, 166, 0.2);
+    box-shadow: 0 10px 30px rgba(252, 3, 127, 0.2);
 }
 
 .carrossel img {
     width: 100%;
     border-radius: 15px;
+    background: #f7f7f7;
 }
 
 .carrossel-btn {
@@ -194,4 +198,8 @@ button:hover {
     .logo {
         height: 45px;
     }
+    #sobre, #contato {
+        padding: 50px 20px;
+    }
+  }
 }
